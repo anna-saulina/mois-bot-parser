@@ -8,6 +8,6 @@ def format_storage():
     with open("storage.json", "r", encoding="utf-8") as read_file:
         data = json.load(read_file)
     print_message = "Название: " + \
-        data["Название"]+"\n"+"Ссылка: "+data["Ссылка"] + \
-        "\n"+"Время проверки: "+data["Время"]
+        data["Name"]+"\n"+"Ссылка: "+data["URL"] + \
+        "\n"+"Время проверки: "+data["Time"]
     return print_message
