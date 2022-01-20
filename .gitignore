@@ -127,4 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/.idea/
+.idea/**
+.idea/.gitignore
+
+ozon_price.json
