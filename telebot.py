@@ -4,7 +4,6 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 from dotenv import load_dotenv
 from os import getenv
-from format_json import format_storage
 
 load_dotenv()
 
