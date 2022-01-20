@@ -131,3 +131,4 @@ dmypy.json
 .idea/.gitignore
 
 ozon_price.json
+test_cron.py
