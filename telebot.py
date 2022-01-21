@@ -17,8 +17,8 @@ logging.basicConfig(level=logging.INFO)
 def format_storage():
     with open("okey_minimum_price.json", "r", encoding="utf-8") as read_file:
         data = json.load(read_file)
-    print_message = "Название: " + data["title"]+"\n"+"Цена за килограмм: "+data["price_kg"]+" "+data["currency"] + \
-        "\n"+"Вес: "+data["weight"]+" "+data["measure"]+"\n"+"Ссылка: " + \
+    print_message = "Название: " + data["title"]+"\n"+"Цена за килограмм: "+str(data["price_kg"])+" "+data["currency"] + \
+        "\n"+"Вес: "+str(data["weight"])+" "+data["measure"]+"\n"+"Ссылка: " + \
         data["link"] + "\n"+"Время проверки: "+data["time"]
     logger.info("formatted message is \n"+print_message)
     return print_message
