@@ -13,13 +13,16 @@ dp = Dispatcher(bot)
 
 logging.basicConfig(level=logging.INFO)
 
+
 def format_storage():
-    with open("storage.json", "r", encoding="utf-8") as read_file:
+    with open("okey_minimum_price.json", "r", encoding="utf-8") as read_file:
         data = json.load(read_file)
-    print_message = "Название: " + \
-        data["Name"]+"\n"+"Ссылка: "+data["URL"] + \
-        "\n"+"Время проверки: "+data["Time"]
+    print_message = "Название: " + data["title"]+"\n"+"Цена за килограмм: "+data["price_kg"]+" "+data["currency"] + \
+        "\n"+"Вес: "+data["weight"]+" "+data["measure"]+"\n"+"Ссылка: " + \
+        data["link"] + "\n"+"Время проверки: "+data["time"]
+    logger.info("formatted message is \n"+print_message)
     return print_message
+
 
 @dp.message_handler()
 async def cmd_test1(message: types.Message):
