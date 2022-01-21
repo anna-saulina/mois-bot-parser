@@ -19,7 +19,7 @@ def format_storage():
         data = json.load(read_file)
     print_message = "Название: " + data["title"]+"\n"+"Цена за килограмм: "+str(data["price_kg"])+" "+data["currency"] + \
         "\n"+"Вес: "+str(data["weight"])+" "+data["measure"]+"\n"+"Ссылка: " + \
-        data["link"] + "\n"+"Время проверки: "+data["time"]
+        data["link"] + "\n"+"Время проверки: 16:14 21-01-2022"
     logger.info("formatted message is \n"+print_message)
     return print_message
 
